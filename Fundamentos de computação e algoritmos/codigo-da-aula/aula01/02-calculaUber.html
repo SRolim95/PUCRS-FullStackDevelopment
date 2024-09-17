@@ -1,0 +1,35 @@
+<!-- Campo de entrada para a distância percorrida em quilômetros -->
+<label for="inputDistancia"> Distância (em km): </label>
+<input id="inputDistancia" type="text">
+
+<!-- Campo de entrada para o tempo gasto em minutos -->
+<label for="inputTempo"> Tempo (em minutos): </label>
+<input id="inputTempo" type="text">
+
+<!-- Botão para acionar o cálculo do valor da corrida -->
+<button id="botaoCalcular" onclick="calcular()">
+    Calcular
+</button>
+
+<script>
+    // Função para formatar um número no estilo de moeda brasileira
+    // Coloca duas casas decimais e troca o ponto pela vírgula
+    function formatamoeda(numero) {
+        return numero.toFixed(2).replace(".", ",");
+    }
+
+    // Função que realiza o cálculo do valor da corrida
+    function calcular() {
+        // Obtém o valor da distância inserida pelo usuário (em km)
+        distanciakm = inputDistancia.value;
+
+        // Obtém o valor do tempo inserido pelo usuário (em minutos)
+        tempomin = inputTempo.value;
+
+        // Calcula o valor da corrida: valor base de R$ 3,00 + R$ 1,60 por km + R$ 0,29 por minuto
+        valorcorrida = 3 + distanciakm * 1.6 + tempomin * 0.29;
+
+        // Atualiza o texto do botão com o valor calculado, formatado em estilo de moeda
+        botaoCalcular.innerHTML = 'Total: R$' + formatamoeda(valorcorrida);
+    }
+</script>
