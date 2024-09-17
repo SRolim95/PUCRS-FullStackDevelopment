@@ -1,2 +1,5 @@
-# PUCRS-FullStackDevelopment
-Repositório para armazenamento de códigos das aulas do curso de pós graduação realizado na PUCRS.
+# Fundamentos de Computação e Algoritmos
+Entendimento de algoritmos e estruturas de dados (listas, filas, pilhas e
+árvores) na solução de problemas. Análise de algorítmica quanto a aplicação e
+complexidade. Análise da aplicabilidade e manejo de estruturas de dados lineares
+e hierárquicas. 
